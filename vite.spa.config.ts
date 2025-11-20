@@ -7,7 +7,7 @@ export default defineConfig({
   base: "/website-demo3/",
   plugins: [react()],
   build: {
-    outDir: "../../dist-spa",    // relative to root
+    outDir: "dist-spa",    // relative to root
     emptyOutDir: true,
     rollupOptions: {
       input: path.resolve(__dirname, "src/react-app/main.tsx"),
