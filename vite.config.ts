@@ -5,7 +5,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 import { mochaPlugins } from "@getmocha/vite-plugins";
 
 export default defineConfig({
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  base: "/website-demo3/",   // <-- ADD THIS
   plugins: [...mochaPlugins(process.env as any), react(), cloudflare()],
   server: {
     allowedHosts: true,
@@ -19,3 +19,4 @@ export default defineConfig({
     },
   },
 });
+
