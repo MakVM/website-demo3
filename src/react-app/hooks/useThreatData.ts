@@ -7,7 +7,7 @@ export function useThreatData() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/threat-data')
+    fetch('/data/threat-data.json')
       .then(res => res.json())
       .then(data => {
         setData(data);
