@@ -55,6 +55,15 @@
         "time": "2025-11-19T07:20:00Z",
         "severity": "Medium",
         "classification": "Malware"
+      },
+              {
+        "id": 7,
+        "title": "Malicious NPM Package Removed",
+        "description": "Package containing crypto miner removed from registry",
+        "source": "npm Security",
+        "time": "2025-11-19T07:20:00Z",
+        "severity": "Medium",
+        "classification": "Malware"
       }
     ],
     "past7Days": {
