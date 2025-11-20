@@ -37,7 +37,7 @@ jobs:
 
       # 4️⃣ Build Vite project
       - name: Build Vite project
-        run: npm run build
+        run: npm run build-spa
 
       # 5️⃣ Configure GitHub Pages
       - name: Setup Pages
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist/client
+          path: ./dist-spa
           name: github-pages  # <--- crucial for deploy-pages@v4
 
       # 7️⃣ Deploy to GitHub Pages
