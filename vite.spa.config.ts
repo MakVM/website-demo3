@@ -3,10 +3,15 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/website-demo3/",  // important for GitHub Pages
+  root: "src/react-app",         // <-- point to your React app folder
+  base: "/website-demo3/",
   plugins: [react()],
   build: {
-    outDir: "dist-spa",      // output folder for GitHub Pages
+    outDir: "../../dist-spa",    // relative to root
+    emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(__dirname, "src/react-app/main.tsx"),
+    },
   },
   resolve: {
     alias: {
@@ -14,3 +19,4 @@ export default defineConfig({
     },
   },
 });
+
