@@ -1,90 +1,98 @@
 {
-    "currentThreat": "OPERATION SHADOW BREACH",
-    "threatScore": 8.4,
-    "todaysEvents": [
-      {
-        "id": 1,
-        "title": "Ransomware Campaign Targeting Financial Institutions",
-        "description": "Multiple banks in EU reported sophisticated phishing attempts",
-        "source": "CERT-EU",
-        "time": "2025-11-19T18:45:00Z",
-        "severity": "High",
-        "classification": "Ransomware"
-      },
-      {
-        "id": 2,
-        "title": "Zero-Day Vulnerability Disclosed in Apache Framework",
-        "description": "CVE-2025-12345 allows remote code execution",
-        "source": "Apache Security Team",
-        "time": "2025-11-19T14:30:00Z",
-        "severity": "High",
-        "classification": "Vulnerability"
-      },
-      {
-        "id": 3,
-        "title": "DDoS Attack on E-commerce Platforms",
-        "description": "Coordinated attack affecting multiple retail sites",
-        "source": "CloudFlare",
-        "time": "2025-11-19T12:15:00Z",
-        "severity": "Medium",
-        "classification": "DDoS"
-      },
-      {
-        "id": 4,
-        "title": "Credential Stuffing Attempts Detected",
-        "description": "Automated login attempts using leaked credentials",
-        "source": "Akamai",
-        "time": "2025-11-19T09:00:00Z",
-        "severity": "Low",
-        "classification": "Account Takeover"
-      },
-      {
-        "id": 5,
-        "title": "Malicious NPM Package Removed",
-        "description": "Package containing crypto miner removed from registry",
-        "source": "npm Security",
-        "time": "2025-11-19T07:20:00Z",
-        "severity": "Medium",
-        "classification": "Malware"
-      },
+  "currentThreat": "OPERATION DOUBLE EXPOSURE",
+  "threatScore": 9.2,
+  "todaysEvents": [
     {
-        "id": 6,
-        "title": "Malicious NPM Package Removed",
-        "description": "Package containing crypto miner removed from registry",
-        "source": "npm Security",
-        "time": "2025-11-19T07:20:00Z",
-        "severity": "Medium",
-        "classification": "Malware"
-      },
-              {
-        "id": 7,
-        "title": "Malicious NPM Package Removed",
-        "description": "Package containing crypto miner removed from registry",
-        "source": "npm Security",
-        "time": "2025-11-19T07:20:00Z",
-        "severity": "Medium",
-        "classification": "Malware"
-      }
-    ],
-    "past7Days": {
-      "briefing": "The cybersecurity landscape over the past week has been marked by a significant uptick in ransomware activities, particularly targeting financial and healthcare sectors. Advanced persistent threat (APT) groups have shown increased sophistication in their phishing campaigns, utilizing AI-generated content to bypass traditional security filters.",
-      "trends": "Key trends include a 34% increase in zero-day exploits compared to the previous week, with particular focus on cloud infrastructure vulnerabilities. Supply chain attacks continue to pose significant risks, with three major incidents reported affecting software distribution channels. Nation-state actors have intensified their reconnaissance activities targeting critical infrastructure.",
-      "predictions": "Based on current intelligence patterns, we anticipate continued escalation in ransomware-as-a-service (RaaS) operations. The emergence of quantum-resistant encryption discussions suggests threat actors are preparing for post-quantum cryptography transitions. Expect increased targeting of IoT devices and edge computing infrastructure in the coming weeks."
+      "id": 1,
+      "title": "Chrome Zero-Day Exploit Urges Immediate Update",
+      "description": "Attackers are exploiting a zero-day flaw in Chrome, urging users to update Chrome immediately.",
+      "source": "https://www.reddit.com/r/cybersecurity/comments/1p1ktpe/update_chrome_asap_attackers_are_already/",
+      "time": "2025-11-19T23:11:30.000Z",
+      "severity": "High",
+      "classification": "exploit"
     },
-    "eventFrequency": [
-      { "date": "2025-11-13", "count": 12 },
-      { "date": "2025-11-14", "count": 18 },
-      { "date": "2025-11-15", "count": 15 },
-      { "date": "2025-11-16", "count": 22 },
-      { "date": "2025-11-17", "count": 19 },
-      { "date": "2025-11-18", "count": 25 },
-      { "date": "2025-11-19", "count": 28 }
-    ],
-    "classificationDistribution": [
-      { "name": "Ransomware", "value": 35 },
-      { "name": "Phishing", "value": 28 },
-      { "name": "DDoS", "value": 15 },
-      { "name": "Malware", "value": 12 },
-      { "name": "Vulnerability", "value": 10 }
-    ]
+    {
+      "id": 2,
+      "title": "Largest Documented Phone Number Exposure via Key-Reuse Patterns",
+      "description": "A team warned that scammers or regimes could have exploited a flaw, noting key-reuse patterns suggesting unauthorized clients, and called it the largest documented phone number exposure, though all collected data was deleted.",
+      "source": "https://bsky.app/profile/hackmanac.com/post/3m5xpar5umq2s",
+      "time": "2025-11-19T08:00:43.000Z",
+      "severity": "Medium",
+      "classification": "leak"
+    },
+    {
+      "id": 3,
+      "title": "Municipal Server Breach and Citizen Data Leak",
+      "description": "An actor exploited a third-party server used by a municipality to steal and leak internal documents, and accessed a database containing citizen police records. This incident is pending verification.",
+      "source": "https://bsky.app/profile/hackmanac.com/post/3m5xm74ynkb2h",
+      "time": "2025-11-18T00:00:00.000Z",
+      "severity": "High",
+      "classification": "breach"
+    }
+  ],
+  "past7Days": {
+    "briefing": "This week saw a pronounced escalation in cyber threats across multiple vectors, with high-severity incidents dominating the landscape. Major data breaches impacted notable organizations like the Washington Post, Logitech, and AT&T, while critical infrastructure such as municipal servers and welfare programs (SNAP) were targeted by fraud and exploitation. The rapid emergence of zero-day vulnerabilities in widely used platforms (Oracle E-Business Suite, Chrome) and successful extortion attempts underscore the sophistication and urgency of current attacks. The period was also marked by persistent social engineering, scams leveraging trusted channels, and crypto thefts, reflecting both the evolving tactics of threat actors and the widening scope of their targets. The convergence of large-scale data exposure, advanced exploits, and financial sector attacks signals a high-risk environment demanding immediate defensive action and heightened awareness.",
+    "trends": "The past seven days revealed a consistent pattern of high-impact breaches and exploits, with threat scores remaining elevated throughout the period. There was a noticeable uptick in attacks exploiting zero-day vulnerabilities and social engineering, affecting both corporate entities and individuals. Scams and frauds, especially those targeting crypto assets and leveraging trusted platforms, continued to proliferate. Financial and tech sectors, as well as public programs, experienced concentrated targeting, with several incidents involving leaked personal data and unauthorized access. The frequency of coordinated group attacks and extortion (e.g., Clop) points to organized cybercriminal activity. User account hacks, exposure of phone numbers, and critical infrastructure vulnerabilities also showed persistence, suggesting ongoing reconnaissance and exploitation by threat actors.",
+    "predictions": "In the coming days, expect continued high risk of data breaches and targeted exploits, particularly in technology, financial services, and public sector systems. Zero-day vulnerabilities will likely remain a focal point for attackers, with the Chrome exploit and Oracle E-Business Suite case suggesting further attempts on widely deployed software. Social engineering and phishing campaigns are anticipated to persist, especially as threat actors leverage active scams and impersonation tactics. Attacks against crypto platforms and AI-powered financial tools may increase, given recent theft and private key leaks. Vigilance is recommended for organizations with public-facing assets, and immediate patching of critical software is advised. Confidence level: High, based on the sustained volume and severity of recent incidents and industry-wide signals of increased attacker activity."
+  },
+  "eventFrequency": [
+    {
+      "date": "2025-11-14",
+      "count": 5
+    },
+    {
+      "date": "2025-11-15",
+      "count": 1
+    },
+    {
+      "date": "2025-11-16",
+      "count": 1
+    },
+    {
+      "date": "2025-11-17",
+      "count": 2
+    },
+    {
+      "date": "2025-11-18",
+      "count": 5
+    },
+    {
+      "date": "2025-11-19",
+      "count": 4
+    },
+    {
+      "date": "2025-11-20",
+      "count": 3
+    }
+  ],
+  "classificationDistribution": [
+    {
+      "name": "scam",
+      "value": 4
+    },
+    {
+      "name": "leak",
+      "value": 3
+    },
+    {
+      "name": "breach",
+      "value": 8
+    },
+    {
+      "name": "fraud",
+      "value": 1
+    },
+    {
+      "name": "hack",
+      "value": 2
+    },
+    {
+      "name": "exploit",
+      "value": 2
+    },
+    {
+      "name": "other",
+      "value": 1
+    }
+  ]
 }
