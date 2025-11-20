@@ -33,13 +33,32 @@ export default function TodaySection({ events, threatScore }: TodaySectionProps)
     return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
   };
 
+  // Get today's date in a formatted string
+  const getTodayDate = () => {
+    return new Date().toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
   return (
     <section id="today" className="min-h-screen py-20 px-4 cyber-grid relative">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-green-500 glow-text font-mono mb-6">
-            TODAY'S EVENTS
-          </h2>
+          {/* Header row with TODAY'S EVENTS and date side by side */}
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-green-500 glow-text font-mono">
+              TODAY'S EVENTS
+            </h2>
+            <div className="mt-4 md:mt-0 inline-block border border-green-500/30 bg-black/80 px-6 py-3 glow-border">
+              <div className="text-green-400/60 text-xs font-mono mb-1">CURRENT DATE</div>
+              <div className="text-xl font-bold text-green-500 font-mono">{getTodayDate()}</div>
+            </div>
+          </div>
+          
+          {/* Threat Score remains below */}
           <div className="inline-block border border-green-500/30 bg-black/80 px-6 py-3 glow-border">
             <div className="text-green-400/60 text-xs font-mono mb-1">DAILY THREAT SCORE</div>
             <div className="text-3xl font-bold text-green-500 font-mono">{threatScore.toFixed(1)}/10</div>
