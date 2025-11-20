@@ -47,8 +47,8 @@ jobs:
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
-          artifact_name: github-pages  # <--- crucial for deploy-pages@v4
+          path: ./dist/client
+          name: github-pages  # <--- crucial for deploy-pages@v4
 
       # 7️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
