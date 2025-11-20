@@ -48,64 +48,67 @@ export default function TodaySection({ events, threatScore }: TodaySectionProps)
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((event) => {
-            const config = severityConfig[event.severity];
-            return (
-              <div
-                key={event.id}
-                className={`border ${config.color} ${config.glow} backdrop-blur-sm p-6 transition-all duration-300 hover:scale-105`}
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <span className="text-2xl">{config.emoji}</span>
-                  <span className={`text-xs font-mono px-2 py-1 border ${config.color} ${config.textColor}`}>
-                    {event.severity.toUpperCase()}
-                  </span>
-                </div>
-
-                <h3 className="text-green-400 font-mono text-lg mb-3 leading-tight">
-                  {event.title}
-                </h3>
-
-                <p className="text-green-500/70 text-sm font-mono mb-4 leading-relaxed">
-                  {event.description}
-                </p>
-
-                <div className="space-y-2 text-xs font-mono">
-                  <div className="flex items-center gap-2 text-green-400/60">
-                    <FileText className="w-3 h-3" />
-                    <span>{event.source}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-green-400/60">
-                    <Clock className="w-3 h-3" />
-                    <span>{formatTime(event.time)}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-green-400/60">
-                    <AlertTriangle className="w-3 h-3" />
-                    <span>{event.classification}</span>
-                  </div>
-                
-  <div className="mt-4 flex gap-2">
-    <a
-      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(event.title)}&url=${encodeURIComponent(window.location.href)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-2 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition"
-      title="Share on Twitter"
+  const config = severityConfig[event.severity];
+  return (
+    <div
+      key={event.id}
+      className={`border ${config.color} ${config.glow} backdrop-blur-sm p-6 transition-all duration-300 hover:scale-105`}
     >
-      Twitter
-    </a>
-    <a
-      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="px-2 py-1 bg-blue-700 text-white text-xs rounded hover:bg-blue-800 transition"
-      title="Share on Facebook"
-    >
-      Facebook
-    </a>
-  </div>
-</div>
-            );
-          })}
+      <div className="flex items-start justify-between mb-3">
+        <span className="text-2xl">{config.emoji}</span>
+        <span className={`text-xs font-mono px-2 py-1 border ${config.color} ${config.textColor}`}>
+          {event.severity.toUpperCase()}
+        </span>
+      </div>
+
+      <h3 className="text-green-400 font-mono text-lg mb-3 leading-tight">
+        {event.title}
+      </h3>
+
+      <p className="text-green-500/70 text-sm font-mono mb-4 leading-relaxed">
+        {event.description}
+      </p>
+
+      <div className="space-y-2 text-xs font-mono">
+        <div className="flex items-center gap-2 text-green-400/60">
+          <FileText className="w-3 h-3" />
+          <span>{event.source}</span>
+        </div>
+        <div className="flex items-center gap-2 text-green-400/60">
+          <Clock className="w-3 h-3" />
+          <span>{formatTime(event.time)}</span>
+        </div>
+        <div className="flex items-center gap-2 text-green-400/60">
+          <AlertTriangle className="w-3 h-3" />
+          <span>{event.classification}</span>
+        </div>
+
+        {/* --- Social Share Buttons --- */}
+        <div className="mt-4 flex gap-2">
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(event.title)}&url=${encodeURIComponent(window.location.href)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition"
+            title="Share on Twitter"
+          >
+            Twitter
+          </a>
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-2 py-1 bg-blue-700 text-white text-xs rounded hover:bg-blue-800 transition"
+            title="Share on Facebook"
+          >
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+})}
+
         </div>
       </div>
     </section>
