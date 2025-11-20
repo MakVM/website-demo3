@@ -9,9 +9,7 @@ export default defineConfig({
   build: {
     outDir: "dist-spa",    // relative to root
     emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(__dirname, "src/react-app/main.tsx"),
-    },
+    
   },
   resolve: {
     alias: {
