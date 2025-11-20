@@ -27,7 +27,7 @@ export default function ChartsSection({ eventFrequency, classificationDistributi
           <div className="border border-green-500/30 bg-black/80 p-6 glow-border backdrop-blur-sm">
             <div className="flex items-center gap-3 mb-6">
               <BarChart3 className="w-5 h-5 text-green-400" />
-              <h3 className="text-xl font-mono text-green-400">EVENT FREQUENCY (7 DAYS)</h3>
+              <h3 className="text-xl font-mono text-green-400">CRITICAL EVENT FREQUENCY (7 DAYS)</h3>
             </div>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={eventFrequency}>
