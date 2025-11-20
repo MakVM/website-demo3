@@ -89,10 +89,28 @@ export default function TodaySection({ events, threatScore }: TodaySectionProps)
       </p>
 
       <div className="space-y-2 text-xs font-mono">
-        <div className="flex items-center gap-2 text-green-400/60">
-          <FileText className="w-3 h-3" />
-          <span>{event.source}</span>
-        </div>
+        <div className="flex items-center gap-2 group">
+  <FileText className="w-3 h-3 text-green-400/60" />
+  <a
+    href={event.source}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      text-green-400/60 
+      underline 
+      decoration-green-400/20 
+      underline-offset-2
+      transition-all 
+      duration-200
+      group-hover:text-green-300 
+      group-hover:decoration-green-300
+      group-hover:drop-shadow-[0_0_4px_rgba(0,255,140,0.6)]
+    "
+  >
+    Source
+  </a>
+</div>
+
         <div className="flex items-center gap-2 text-green-400/60">
           <Clock className="w-3 h-3" />
           <span>{formatTime(event.time)}</span>
