@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  root: "src/react-app",         // <-- point to your React app folder
+  root: ".",         // <-- point to your React app folder
   base: "/website-demo3/",
   plugins: [react()],
   build: {
