@@ -82,8 +82,28 @@ export default function TodaySection({ events, threatScore }: TodaySectionProps)
                     <AlertTriangle className="w-3 h-3" />
                     <span>{event.classification}</span>
                   </div>
-                </div>
-              </div>
+                
+  <div className="mt-4 flex gap-2">
+    <a
+      href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(event.title)}&url=${encodeURIComponent(window.location.href)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-2 py-1 bg-blue-500 text-white text-xs rounded hover:bg-blue-600 transition"
+      title="Share on Twitter"
+    >
+      Twitter
+    </a>
+    <a
+      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-2 py-1 bg-blue-700 text-white text-xs rounded hover:bg-blue-800 transition"
+      title="Share on Facebook"
+    >
+      Facebook
+    </a>
+  </div>
+</div>
             );
           })}
         </div>
